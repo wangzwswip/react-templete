@@ -1,7 +1,7 @@
 const {
   override,
   fixBabelImports,
-  // addLessLoader,
+  addLessLoader,
   addWebpackAlias,
 } = require("customize-cra");
 const path = require("path");
@@ -30,14 +30,14 @@ module.exports = override(
     style: true, // 自动打包相关的样式
   }),
   // 使用less-loader对源码中的less的变量进行重新指定
-  // addLessLoader({
-  //   javascriptEnabled: true,
-  //   modifyVars: { "@primary-color": "#1DA57A" }
-  //   // cssModules:{
-  //   //   localIdentName: "[path][name]__[local]--[hash:base64:5]", // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
-  //   // }
-  //   // additionalData: `@import "${ resolve('./src/assets/test.less')}"` // less中的变量可以在其他文件中用
-  // }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { "@primary-color": "#1DA57A" }
+    // cssModules:{
+    //   localIdentName: "[path][name]__[local]--[hash:base64:5]", // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
+    // }
+    // additionalData: `@import "${ resolve('./src/assets/test.less')}"` // less中的变量可以在其他文件中用
+  }),
   // 配置路径别名
   addWebpackAlias({
     "@": resolve("src"),
