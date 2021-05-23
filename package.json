@@ -17,7 +17,8 @@
     "build": "react-app-rewired --max-old-space-size=4096 build ",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "commit": "git-cz"
+    "commit": "git cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -w -r 0"
   },
   "eslintConfig": {
     "extends": [
