@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-// import { Provider } from "react-redux";
-// import { ConfigProvider } from "antd";
-// import zhCN from "antd/es/locale/zh_CN";
-// import store from "./store";
-// import Router from "./router";
+import { Provider } from "react-redux";
+import { ConfigProvider } from "antd";
+import zhCN from "antd/es/locale/zh_CN";
+import store from "./store";
+import Router from "./router";
+import "@/styles/index.less";
 
 class App extends Component {
   render() { 
     return (
-      <button>ddd</button>
-      // <ConfigProvider locale={zhCN}>
-      //   <Provider store={store}>
-      //     <Router />
-      //   </Provider>
-      // </ConfigProvider>
+      <ConfigProvider locale={zhCN}>
+        <Provider store={store}>
+          <Router />
+        </Provider>
+      </ConfigProvider>
     );
   }
 }
