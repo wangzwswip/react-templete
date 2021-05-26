@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Icon } from "antd";
+import { Menu } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import { Scrollbars } from "react-custom-scrollbars";
 import { connect } from "react-redux";
@@ -44,7 +44,7 @@ class Menus extends Component {
           pre.push(
             <Menu.Item key={item.path}>
               <Link to={item.path}>
-                {item.icon ? <Icon type={item.icon} /> : null}
+                {/* {item.icon ? <Icon type={item.icon} /> : null} */}
                 <span>{item.title}</span>
               </Link>
             </Menu.Item>
@@ -67,7 +67,7 @@ class Menus extends Component {
               key={item.path}
               title={
                 <span>
-                  {item.icon ? <Icon type={item.icon} /> : null}
+                  {/* {item.icon ? <Icon type={item.icon} /> : null} */}
                   <span>{item.title}</span>
                 </span>
               }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux'
-import { Drawer, Switch, Row, Col, Divider, Alert, Icon, Button } from "antd";
+import { Drawer, Switch, Row, Col, Divider, Alert, Button } from "antd";
 import { toggleSettingPanel, changeSetting } from "@/store/actions";
 import clip from "@/utils/clipboard";
 
@@ -99,7 +99,6 @@ const RightPanel = (props) => {
               description="配置栏只在开发环境用于预览，生产环境不会展现，请拷贝后手动修改/src/defaultSettings.js配置文件"
               type="warning"
               showIcon
-              icon={<Icon type="notification" />}
               style={{ marginBottom: "16px" }}
             />
             <Button style={{ width: "100%" }} icon="copy" onClick={handleCopy}>

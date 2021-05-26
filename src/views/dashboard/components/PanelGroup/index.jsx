@@ -1,5 +1,6 @@
 import React from "react";
-import { Row, Col, Icon } from "antd";
+import { Row, Col } from "antd";
+import {ShoppingOutlined } from "@ant-design/icons";
 import CountUp from "react-countup";
 import "./index.less";
 
@@ -46,11 +47,12 @@ const PanelGroup = (props) => {
           >
             <div className="card-panel">
               <div className="card-panel-icon-wrapper">
-                <Icon
+              <ShoppingOutlined style={{ fontSize: 55, color: chart.color }} className={chart.type}/>
+                {/* <Icon
                   className={chart.type}
                   style={{ fontSize: 55, color: chart.color }}
                   type={chart.icon}
-                />
+                /> */}
               </div>
               <div className="card-panel-description">
                 <p className="card-panel-text">{chart.type}</p>

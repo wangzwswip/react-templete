@@ -3,7 +3,6 @@ import {
   Table,
   Tag,
   Form,
-  Icon,
   Button,
   Input,
   Radio,
@@ -11,6 +10,7 @@ import {
   message,
   Collapse,
 } from "antd";
+import { FileOutlined } from "@ant-design/icons"
 
 import { excelList } from "@/api/excel";
 const { Panel } = Collapse;
@@ -140,7 +140,7 @@ class Excel extends Component {
                 <Input
                   style={{ width: "250px" }}
                   prefix={
-                    <Icon type="file" style={{ color: "rgba(0,0,0,.25)" }} />
+                    <FileOutlined style={{ color: "rgba(0,0,0,.25)" }}/>
                   }
                   placeholder="请输入文件名(默认excel-file)"
                   onChange={this.filenameChange}
