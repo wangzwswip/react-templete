@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import screenfull from "screenfull";
 import { Icon, message, Tooltip } from "antd";
-import "./index.less";
+import fullScreenStyles from  "./fullScreen.module.less";
 
 const click = () => {
   if (!screenfull.isEnabled) {
@@ -28,7 +28,7 @@ const FullScreen = () => {
   const title = isFullscreen ? "取消全屏" : "全屏";
   const type = isFullscreen ? "fullscreen-exit" : "fullscreen";
   return (
-    <div className="fullScreen-container">
+    <div className={fullScreenStyles.fullScreenContainer}>
       <Tooltip placement="bottom" title={title}>
         <Icon type={type} onClick={click} />
       </Tooltip>

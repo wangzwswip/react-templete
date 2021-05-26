@@ -30,6 +30,7 @@ const Login = (props) => {
     login(username, password)
       .then((data) => {
         message.success("登录成功");
+        setLoading(false);
         handleUserInfo(data.token);
       })
       .catch((error) => {
@@ -53,9 +54,9 @@ const Login = (props) => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-  // if (token) {
-  //   return <Redirect to="/dashboard" />;
-  // }
+  if (token) {
+    return <Redirect to="/dashboard" />;
+  }
   return (
     <DocumentTitle title={"用户登录"}>
       <div className={loginStyles.loginContainer}>
