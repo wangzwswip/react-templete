@@ -25,7 +25,7 @@ const User = Loadable({loader: () => import(/*webpackChunkName:'User'*/'@/views/
 const About = Loadable({loader: () => import(/*webpackChunkName:'About'*/'@/views/about'),loading: Loading});
 const Bug = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/bug'),loading: Loading});
 
-export default [
+const routeList = [
   { path: "/dashboard", component: Dashboard, roles: ["admin","editor","guest"] },
   { path: "/doc", component: Doc, roles: ["admin","editor","guest"] },
   { path: "/guide", component: Guide, roles: ["admin","editor"] },
@@ -51,3 +51,5 @@ export default [
   { path: "/bug", component: Bug, roles: ["admin"] },
   { path: "/error/404", component: Error404 },
 ];
+
+export default routeList

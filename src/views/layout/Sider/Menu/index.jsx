@@ -19,7 +19,7 @@ const reorder = (list, startIndex, endIndex) => {
 
 class Menus extends Component {
   state = {
-    menuTreeNode: null,
+    menuTreeNode: [],
     openKey: [],
   };
   // filterMenuItem用来根据配置信息筛选可以显示的菜单项
@@ -98,7 +98,7 @@ class Menus extends Component {
     let menuItem = getMenuItemInMenuListByProperty(menuList, "path", key);
     this.props.addTag(menuItem);
   };
-  componentWillMount() {
+  componentDidMount() {
     const menuTreeNode = this.getMenuNodes(menuList);
     this.setState({
       menuTreeNode,

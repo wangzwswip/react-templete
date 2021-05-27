@@ -11,8 +11,8 @@ class KeyboardChart extends Component {
     debounce(this.initChart.bind(this), 300)();
     window.addEventListener("resize", () => this.resize());
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.sidebarCollapsed !== this.props.sidebarCollapsed) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.sidebarCollapsed !== this.props.sidebarCollapsed) {
       this.resize();
     }
   }

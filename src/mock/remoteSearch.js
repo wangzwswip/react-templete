@@ -10,6 +10,7 @@ for (let i = 0; i < count; i++) {
     'tag|1': ['success', 'pending']
   }))
 }
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   transactionList: (_) => {
     return {

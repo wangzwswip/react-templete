@@ -28,6 +28,7 @@ const users = {
   },
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   login: (config) => {
     const { username } = JSON.parse(config.body);

@@ -1,4 +1,4 @@
-export default {
+const defaultSettings =  {
   /**
    * @type {boolean} true | false
    * @description Whether show the settings right-panel
@@ -25,3 +25,5 @@ export default {
    */
   tagsView: true,
 };
+
+export default defaultSettings

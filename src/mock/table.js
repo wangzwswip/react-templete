@@ -15,6 +15,7 @@ for (let i = 0; i < count; i++) {
     })
   );
 }
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   tableList: (config) => {
     const { pageNumber, pageSize, title, status, star } = JSON.parse(
