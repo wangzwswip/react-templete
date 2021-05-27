@@ -166,8 +166,7 @@ class MixChart extends Component {
           barMaxWidth: 35,
           barGap: "10%",
           itemStyle: {
-            normal: {
-              color: "rgba(255,144,128,1)",
+            color: "rgba(255,144,128,1)",
               label: {
                 show: true,
                 textStyle: {
@@ -178,7 +177,6 @@ class MixChart extends Component {
                   return p.value > 0 ? p.value : "";
                 },
               },
-            },
           },
           data: [
             709,
@@ -201,8 +199,7 @@ class MixChart extends Component {
           type: "bar",
           stack: "total",
           itemStyle: {
-            normal: {
-              color: "rgba(0,191,183,1)",
+            color: "rgba(0,191,183,1)",
               barBorderRadius: 0,
               label: {
                 show: true,
@@ -211,7 +208,6 @@ class MixChart extends Component {
                   return p.value > 0 ? p.value : "";
                 },
               },
-            },
           },
           data: [
             327,
@@ -235,8 +231,7 @@ class MixChart extends Component {
           symbolSize: 10,
           symbol: "circle",
           itemStyle: {
-            normal: {
-              color: "rgba(252,230,48,1)",
+            color: "rgba(252,230,48,1)",
               barBorderRadius: 0,
               label: {
                 show: true,
@@ -245,7 +240,6 @@ class MixChart extends Component {
                   return p.value > 0 ? p.value : "";
                 },
               },
-            },
           },
           data: [
             1036,

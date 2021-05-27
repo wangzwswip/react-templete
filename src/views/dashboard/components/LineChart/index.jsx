@@ -90,12 +90,10 @@ class LineChart extends Component {
         {
           name: "expected",
           itemStyle: {
-            normal: {
+            color: "#FF005A",
+            lineStyle: {
               color: "#FF005A",
-              lineStyle: {
-                color: "#FF005A",
-                width: 2,
-              },
+              width: 2,
             },
           },
           smooth: true,
@@ -109,8 +107,7 @@ class LineChart extends Component {
           smooth: true,
           type: "line",
           itemStyle: {
-            normal: {
-              color: "#3888fa",
+            color: "#3888fa",
               lineStyle: {
                 color: "#3888fa",
                 width: 2,
@@ -118,7 +115,6 @@ class LineChart extends Component {
               areaStyle: {
                 color: "#f3f8ff",
               },
-            },
           },
           data: actualData,
           animationDuration: 2800,
